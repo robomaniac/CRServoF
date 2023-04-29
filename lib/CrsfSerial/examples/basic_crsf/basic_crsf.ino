@@ -2,7 +2,12 @@
 
 // Pass any HardwareSerial port
 // "Arduino" users (atmega328) can not use CRSF_BAUDRATE, as the atmega does not support it
-// and should pass 250000, but then also must flash the receiver with RCVR_UART_BAUD=250000
+// and should pass 250000.
+// Open your ExpressLRS Configurator and preapre to flash your receiver by selecting it thought the menu.
+// In the device optios, go to the compatibility options and select RCVR_UART_BAUD and type 250000 in the value.
+// Flash your module and it will be ready to use.
+// for more info on compatibility check https://www.expresslrs.org/software/user-defines/#compatibility-options
+// but then also must flash the receiver with RCVR_UART_BAUD=250000
 // Also note the atmega only has one Serial, so logging to Serial must be removed
 CrsfSerial crsf(Serial1, CRSF_BAUDRATE);
 
